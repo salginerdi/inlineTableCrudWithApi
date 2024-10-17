@@ -1,0 +1,52 @@
+<div class="card">
+  <div class="card">
+    <p-messages [value]="messages()" [enableService]="false" [closable]="true"></p-messages>
+  </div>
+
+  <p-table
+    [value]="departmentList"
+    styleClass="p-datatable-gridlines"
+    [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Sr No</th>
+        <th>Department Name</th>
+        <th>Department Logo Url</th>
+        <th>Action
+        </th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-department>
+      <tr>
+        <td>{{ department.departmentId + 1 }}</td>
+        @if (department.isEdit) {
+          <td><input pInputText type="text" [(ngModel)]="department.departmentName" class="form-control"></td>
+          <td><input pInputText type="text" [(ngModel)]="department.departmentLogo" class="form-control"></td>
+        } @else {
+          <td>{{ department.departmentName }}</td>
+          <td>{{ department.departmentLogo }}</td>
+        }
+        <td>
+          @if (department.isEdit) {
+            @if (department.departmentId == 0) {
+              <p-button label="Save" class="mr-2" severity="success" (click)="onNewCreate(department)"><i class="pi pi-save pr-2"></i></p-button>
+            } @else {
+              <p-button label="Update" class="mr-2" severity="help" (click)="onUpdate(department)"><i class="pi pi-user-edit pr-2"></i></p-button>
+            }
+            <p-button label="Cancel" severity="contrast" (click)="onCancel(department)"><i class="pi pi-undo pr-2"></i></p-button>
+          } @else {
+            <p-button label="Edit" class="mr-2" (click)="onEdit(department)"><i class="pi pi-pencil pr-2"></i></p-button>
+            <p-button label="Delete" severity="danger"><i class="pi pi-times pr-2"></i></p-button>
+          }
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-button class="flex justify-end mt-4 mr-4" label="Add New" severity="success" (click)="addNew()"><i class="pi pi-plus pr-2">
+
+  </i></p-button>
+</div>
+
+
+
+
