@@ -3,6 +3,8 @@
 Bu proje, Angular 18 kullanılarak geliştirilmiş, inline düzenleme özellikli bir CRUD (Create, Read, Update, Delete) tablosu uygulamasıdır. PrimeNG ve Tailwind CSS kullanılarak oluşturulmuştur ve bir API ile entegre çalışmaktadır.
 
 ## Ekran Görüntüsü
+![1](https://github.com/user-attachments/assets/1621e80e-d766-454f-9650-d8918fa1364d)
+
 
 ## Özellikler
 
@@ -42,6 +44,7 @@ Bu proje, Angular 18 kullanılarak geliştirilmiş, inline düzenleme özellikli
 This project is an inline CRUD (Create, Read, Update, Delete) table application developed using Angular 18. It is built with PrimeNG and Tailwind CSS, and is integrated with an API.
 
 ## To Preview
+![1](https://github.com/user-attachments/assets/db374362-2ab4-40b0-b3e5-8004157deef1)
 
 
 ## Features
